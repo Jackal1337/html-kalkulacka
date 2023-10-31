@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background: linear-gradient(rgba(109, 109, 109, 0.5), rgba(17, 17, 17, 0.5)), url('https://i.imgur.com/mlsroVp.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body .container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+body .container .calculator {
+  position: relative;
+  display: grid;
+}
+body .container .calculator .value {
+  grid-column: span 4;
+  height: 140px;
+  width: 300px;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 30px;
+  background: transparent;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  resize: none;
+}
+body .container .calculator span {
+  display: grid;
+  place-items: center;
+  width: 75px;
+  height: 75px;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+body .container .calculator span.clear {
+  grid-column: span 2;
+  width: 150px;
+  background: rgba(255, 255, 255, 0.05);
+}
+body .container .calculator span.plus {
+  grid-row: span 2;
+  height: 150px;
+}
+body .container .calculator span.equal {
+  background: rgba(255, 255, 255, 0.05);
+}
+body .container .calculator span:hover {
+  transition: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+body .container .calculator span:active {
+  background: #1f1f1f;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+}
